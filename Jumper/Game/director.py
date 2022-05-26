@@ -1,5 +1,5 @@
 from game.terminal_service import TerminalService
-from game.guesser import Word
+from game.word import Word
 from game.jumper import Jumper
 
 
