@@ -7,7 +7,8 @@ class Word:
 
     self.terminalservice = TerminalService()
     self._word_list = ["zebra", "lion", "wolf", "bear"]
-    self.choose_word()
+    
+    
     
 
   def choose_word(self):
@@ -19,6 +20,10 @@ class Word:
 
     word = self.choose_word()
     self.terminalservice.write_text(word)
+
+  def process_guess(self, guess_letter):
+
+    pass
 
   
 

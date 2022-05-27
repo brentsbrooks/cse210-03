@@ -44,7 +44,9 @@ class Director:
 
 
   def _get_inputs(self):
-    pass
+    
+    new_guess = self._terminal_service.read_text("\nGuess a letter [a-z]: ")
+    self._word.process_guess(new_guess)
   
 
 
