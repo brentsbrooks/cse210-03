@@ -7,23 +7,25 @@ class Word:
 
     self.terminalservice = TerminalService()
     self._word_list = ["zebra", "lion", "wolf", "bear"]
-    
-    
+    self._chosen_word = random.choice(self._word_list)
+    self._word_guess = " _ " * len(self._chosen_word)
     
 
-  def choose_word(self):
 
-    chosen_word = random.choice(self._word_list)
-    return chosen_word
 
   def draw_word_guess(self):
 
-    word = self.choose_word()
-    self.terminalservice.write_text(word)
+    self.terminalservice.write_text(self._word_guess)
+
 
   def process_guess(self, guess_letter):
 
-    pass
+    for i in range(len(self._chosen_word)):
+      if guess_letter == self._chosen_word[i]:
+        # correct_guess = True
+        self._word_guess[i] = guess_letter
+
+
 
   
 
